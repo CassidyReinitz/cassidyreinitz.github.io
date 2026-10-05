@@ -5,14 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cassidy Reinitz | Computer Science Portfolio</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -20,55 +14,22 @@
       color: #202020;
       background: #f5f5f3;
     }
-
-    header,
-    main,
-    footer {
+    header, main, footer {
       max-width: 960px;
       margin: auto;
       padding: 32px 24px;
     }
-
-    header {
-      padding-top: 64px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: #111;
-      line-height: 1.25;
-    }
-
+    header { padding-top: 64px; }
+    h1, h2, h3 { color: #111; line-height: 1.25; }
     h1 {
       font-size: clamp(2rem, 6vw, 3rem);
       margin-bottom: 12px;
     }
-
-    .subtitle {
-      color: #555;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 24px;
-    }
-
-    a {
-      color: #202020;
-      text-underline-offset: 4px;
-    }
-
-    a:hover {
-      color: #555;
-    }
-
-    a:focus-visible {
-      outline: 3px solid #333;
-      outline-offset: 5px;
-    }
-
+    .subtitle { color: #555; }
+    nav { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+    a { color: #202020; text-underline-offset: 4px; }
+    a:hover { color: #555; }
+    a:focus-visible { outline: 3px solid #333; outline-offset: 5px; }
     section {
       background: white;
       padding: 32px;
@@ -77,14 +38,12 @@
       border-radius: 12px;
       scroll-margin-top: 24px;
     }
-
     .label {
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #555;
     }
-
     .button {
       display: inline-block;
       padding: 10px 16px;
@@ -92,23 +51,10 @@
       border-radius: 6px;
       margin: 6px 8px 6px 0;
     }
-
-    footer {
-      color: #555;
-      font-size: 0.9rem;
-    }
-
+    footer { color: #555; font-size: 0.9rem; }
     @media (max-width: 600px) {
-      section {
-        padding: 22px;
-      }
-
-      header,
-      main,
-      footer {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
+      section { padding: 22px; }
+      header, main, footer { padding-left: 16px; padding-right: 16px; }
     }
   </style>
 </head>
@@ -123,9 +69,10 @@
       My portfolio documents the growth of selected coursework through
       improvements in software design, algorithms, databases, and security.
     </p>
-
     <nav aria-label="Portfolio navigation">
       <a href="#software">Software Design and Engineering</a>
+      <a href="#algorithms">Algorithms and Data Structures</a>
+      <a href="#databases">Databases</a>
       <a href="#review">Code Review</a>
       <a href="#portfolio-progress">Portfolio Progress</a>
       <a href="https://github.com/CassidyReinitz/cassidyreinitz.github.io">
@@ -227,33 +174,227 @@
 
       <h3>Artifact Files</h3>
       <p>
-        Download the technical archive to review the original and enhanced
-        project materials. The Word narrative explains the artifact
-        selection, improvements, learning, and course outcome coverage.
+        The technical archive contains original and enhanced project
+        materials. The Word narrative explains the selection, improvements,
+        learning, and course outcome coverage.
+      </p>
+      <a class="button"
+         href="./CS499%20Milestone%20Two%20-%20TechnicalArtifact%20Cassidy%20Reinitz.zip"
+         download>Download Travlr Technical Artifact (ZIP)</a>
+      <a class="button"
+         href="./CS499%20Milestone%20Two%20Enhancement%20Narrative%20Cassidy%20Reinitz.docx"
+         download>Download Travlr Narrative (Word)</a>
+    </section>
+
+    <section id="algorithms" aria-labelledby="algorithms-title">
+      <p class="label">Enhancement Two · CS 300</p>
+      <h2 id="algorithms-title">Advising Assistance Program</h2>
+
+      <h3>Artifact and Selection</h3>
+      <p>
+        I created this C++ course-planning application in CS 300 Data
+        Structures and Algorithms in June 2025 and enhanced it for CS 499
+        in September 2026. The original program loaded comma-separated
+        course records, displayed an alphabetical catalog, and supported
+        course searches with prerequisite information.
+      </p>
+      <p>
+        I selected this artifact because it demonstrates my progression
+        from storing individual records to modeling connected dependencies.
+        The original program treated prerequisites primarily as attached
+        text. A directed graph makes it possible to validate those
+        relationships and generate a prerequisite-respecting course sequence.
       </p>
 
-      <a
-        class="button"
-        href="./CS499%20Milestone%20Two%20-%20TechnicalArtifact%20Cassidy%20Reinitz.zip"
-        download
-      >
-        Download Travlr Technical Artifact (ZIP)
-      </a>
+      <h3>Algorithms and Data Structure Improvements</h3>
+      <p>
+        The enhanced CourseCatalog class replaces the global ordered map
+        with an unordered_map keyed by normalized course number, providing
+        average O(1) insertion and lookup. An adjacency list stores edges
+        from prerequisites to dependent courses, and an in-degree map tracks
+        each course's prerequisite count. Alphabetical sorting occurs only
+        for display, at O(V log V), separating operational lookup from
+        presentation order.
+      </p>
+      <p>
+        Depth-first search detects cycles in O(V + E) time and reports the
+        actual circular chain. Kahn's topological-sort algorithm generates
+        a valid completion sequence. A min-priority queue provides
+        deterministic selection when multiple courses are available, with
+        a documented upper bound of O((V + E) log V). I accepted the heap
+        cost because consistent results improve usability and testability.
+      </p>
+      <p>
+        The loader parses quoted fields, normalizes identifiers, and rejects
+        malformed records, duplicate courses, repeated or missing
+        prerequisites, empty datasets, and cycles. It builds and validates
+        a candidate catalog before committing it, preventing partially
+        loaded data from influencing advising results. Strict whole-line
+        menu parsing allows the program to recover from invalid input.
+      </p>
 
-      <a
-        class="button"
-        href="./CS499%20Milestone%20Two%20Enhancement%20Narrative%20Cassidy%20Reinitz.docx"
-        download
-      >
-        Download Enhancement Narrative (Word)
-      </a>
+      <h3>Learning and Challenges</h3>
+      <p>
+        Modeling edge direction was an important challenge. Although a
+        record lists its prerequisites, scheduling needs edges from each
+        prerequisite to its dependent course so that completing a
+        prerequisite reduces the dependent course's in-degree. This taught
+        me to align stored relationships with the operation being performed.
+      </p>
+      <p>
+        Hash-table iteration also required careful handling because its
+        unspecified order could produce inconsistent output. Sorting for
+        display and using a min-priority queue for scheduling resolved that
+        issue. Transactional loading taught me that rejecting a bad record
+        is insufficient if earlier records have already changed active
+        state. These decisions connect with my human-computer interaction
+        interests through predictable output and specific error messages.
+      </p>
 
-      <a
-        class="button"
-        href="https://github.com/CassidyReinitz/cassidyreinitz.github.io"
-      >
-        View GitHub Repository
-      </a>
+      <h3>Validation and Course Outcomes</h3>
+      <p>
+        All ten automated tests passed under both the normal warning-enabled
+        build and AddressSanitizer and UndefinedBehaviorSanitizer. Coverage
+        includes loading, normalized lookup, alphabetical display,
+        topological ordering, quoted titles, duplicates, missing
+        prerequisites, cycles, malformed or empty data, and invalid menus.
+      </p>
+      <p>
+        Outcome Three is the primary focus through graph modeling,
+        algorithm selection, complexity analysis, and explicit trade-offs.
+        The working application supports Outcome Four; documentation and
+        clear feedback support Outcome Two; defensive parsing and rejection
+        of inconsistent input support Outcome Five. Documentation provides
+        limited support for Outcome One, which remains a focus of the
+        final professional self-assessment.
+      </p>
+
+      <h3>Artifact Files</h3>
+      <a class="button"
+         href="./4-2%20Milestone%203%20Technical%20Artifacts.zip"
+         download>Download Algorithms Technical Artifact (ZIP)</a>
+      <a class="button"
+         href="./4-2%20Milestone%20Enhancements.docx"
+         download>Download Algorithms Narrative (Word)</a>
+    </section>
+
+    <section id="databases" aria-labelledby="databases-title">
+      <p class="label">Enhancement Three · CS 340</p>
+      <h2 id="databases-title">Grazioso Salvare Rescue Animal Dashboard</h2>
+
+      <h3>Artifact and Selection</h3>
+      <p>
+        This CS 340 Client/Server Development artifact connects a Python
+        dashboard to MongoDB shelter records through an AnimalShelter CRUD
+        module. The original notebook includes an animal table, breed
+        chart, location map, and rescue-category filters. Its supplied
+        source archive is dated February 22, 2026; that date identifies the
+        archive rather than establishing the exact creation date. I
+        enhanced the project for CS 499 in October 2026.
+      </p>
+      <p>
+        I selected this artifact because database design directly affects
+        the reliability of rescue-planning information. The enhancement
+        demonstrates secure data access, schema validation, controlled
+        queries, pagination, aggregation, and measured index evaluation.
+      </p>
+
+      <h3>Database and Security Improvements</h3>
+      <p>
+        Python validation checks required fields, permitted values, text
+        lengths, finite numbers, and coordinate ranges. It rejects
+        unsupported fields, MongoDB operators, and caller-controlled audit
+        metadata. MongoDB also enforces a strict JSON Schema validator.
+        A migration preflight checks historical records and stops when
+        invalid data requires attention.
+      </p>
+      <p>
+        Environment variables replace embedded connection configuration.
+        Authenticated, collection-scoped reader and editor roles enforce
+        viewing and writing permissions in MongoDB. Updates and deletes
+        target a single record ID. Creation and modification metadata
+        capture the database account and timestamp, while atomic soft
+        deletion preserves deletion metadata. This metadata is not an
+        immutable audit ledger, and a shared account does not identify
+        individual people.
+      </p>
+      <p>
+        Server-side pagination bounds page size at 100 and uses _id as a
+        deterministic sorting tie-breaker. The dashboard requests ten
+        records per page. Breed aggregation covers all matching records,
+        preserving the distinction between a displayed page and the
+        complete results. A separate $facet pipeline summarizes rescue
+        categories while retaining category overlaps. The browser remains
+        read-only; editor CRUD operations are available through the service.
+      </p>
+
+      <h3>Validation and Performance Evidence</h3>
+      <p>
+        All 22 integration tests passed against an authenticated MongoDB
+        8.0.12 instance. They cover CRUD, audit metadata, soft deletion,
+        schema enforcement through direct writes, invalid inputs, operator
+        rejection, reader write denial, collection permissions, pagination,
+        aggregation, migration, and dashboard callbacks.
+      </p>
+      <p>
+        An executionStats comparison used 30,000 synthetic AAC-like records
+        containing 300 water-rescue matches. After indexing, documents
+        examined fell from 30,000 to 300, a 99 percent reduction, while
+        the first ten result identities remained unchanged. A sort stage
+        remained for animal-ID ordering. These results describe the test
+        workload, not guaranteed production performance.
+      </p>
+      <p>
+        Indexes introduce storage and write overhead. Deep offset pagination
+        becomes more expensive, and separate page and count queries can
+        differ during concurrent writes. The original shelter dataset was
+        unavailable, so migration against that dataset remains a future
+        verification step.
+      </p>
+
+      <h3>Learning and Challenges</h3>
+      <p>
+        Server-side pagination required changes to the dashboard callback
+        contract and revealed that a chart based only on the current page
+        could misrepresent the dataset. Aggregation solved that problem
+        while keeping table requests bounded. Historical compatibility
+        required preserving original field names and screening rules and
+        avoiding an unsupported unique constraint on animal IDs.
+      </p>
+      <p>
+        Testing both the service and direct database access reinforced that
+        authorization must hold when application checks are bypassed.
+        Evaluating actual query plans also taught me to distinguish measured
+        improvements from assumptions. This work connects secure backend
+        design with a clearer interface, supporting my full-stack and
+        human-computer interaction interests.
+      </p>
+
+      <h3>Course Outcome Progress</h3>
+      <p>
+        Outcome Four has the strongest evidence through the MongoDB and
+        Python solution. Database-enforced least privilege and controlled
+        writes support Outcome Five. Query plans, stable results, and
+        performance trade-offs support Outcome Three. The narrative,
+        README, interface labels, and reproducible evidence support
+        Outcome Two. Documentation helps maintainers and rescue staff
+        interpret results, but this individual project does not establish
+        completion of a collaborative team process or evaluation with
+        diverse users.
+      </p>
+
+      <h3>Artifact Files</h3>
+      <p>
+        The archive includes original and enhanced code, setup instructions,
+        and verification evidence. The complete narrative includes its
+        supporting MongoDB references.
+      </p>
+      <a class="button"
+         href="./5-2%20Milestone%20Four-Technical%20Artifact%20Cassidy_Reinitz.zip"
+         download>Download Database Technical Artifact (ZIP)</a>
+      <a class="button"
+         href="./5-2%20Milestone%20Four%20-%20Enhancement%20Three%20-%20Database.docx"
+         download>Download Database Narrative (Word)</a>
     </section>
 
     <section id="review" aria-labelledby="review-title">
@@ -271,21 +412,24 @@
     <section id="portfolio-progress" aria-labelledby="progress-title">
       <h2 id="progress-title">Portfolio Progress</h2>
       <p>
-        The software design and engineering enhancement is presented above.
-        The algorithms and data structures enhancement, database
-        enhancement, and professional self-assessment will be integrated
-        as the remaining portfolio pages are published.
+        All three enhancement categories are presented above with technical
+        archives and accompanying narratives. The professional
+        self-assessment will be added during final portfolio preparation.
+        Applicable instructor feedback will be incorporated as part of
+        final polishing.
       </p>
+      <a class="button"
+         href="https://github.com/CassidyReinitz/cassidyreinitz.github.io">
+        View GitHub Repository
+      </a>
     </section>
   </main>
 
   <footer>
-    <p>
-      &copy; 2026 Cassidy Reinitz · CS 499 Computer Science Portfolio
-    </p>
+    <p>&copy; 2026 Cassidy Reinitz · CS 499 Computer Science Portfolio</p>
     <p>
       AI assistance disclosure: ChatGPT assisted with preparing the HTML,
-      styling, and adapting the existing enhancement narrative for this page.
+      styling, and adapting the existing enhancement narratives for this page.
     </p>
   </footer>
 </body>
