@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cassidy Reinitz | Computer Science Portfolio</title>
-
   <style>
     * {
       box-sizing: border-box;
@@ -113,17 +112,13 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <p class="label">CS 499 · Computer Science Capstone</p>
-
     <h1>Cassidy Reinitz</h1>
-
     <p class="subtitle">
       Software engineering · Full-stack development · Human-computer interaction
     </p>
-
     <p>
       My portfolio documents the growth of selected coursework through
       improvements in software design, algorithms, databases, and security.
@@ -140,18 +135,15 @@
   </header>
 
   <main>
-    <section id="software">
+    <section id="software" aria-labelledby="software-title">
       <p class="label">Enhancement One · CS 465</p>
-
-      <h2>Travlr Getaways</h2>
-
+      <h2 id="software-title">Travlr Getaways</h2>
       <p>
         A full-stack travel application originally developed in July and
         August 2026 and enhanced for CS 499 in September 2026.
       </p>
 
       <h3>Artifact and Selection</h3>
-
       <p>
         Travlr Getaways combines a public Express and Handlebars website
         with an Angular administrative application. A Node.js and Express
@@ -159,17 +151,14 @@
         The application supports trip management and administrative
         authentication using Passport and JSON Web Tokens.
       </p>
-
       <p>
         I selected this artifact because it demonstrates my ability to
         connect presentation, service, controller, model, and database
-        layers. Enhancing the completed CS 465 Module Seven version
-        allowed me to improve design and security across an entire
-        application.
+        layers. Enhancing the completed CS 465 Module Seven version allowed
+        me to improve design and security across an entire application.
       </p>
 
       <h3>Design Improvements</h3>
-
       <p>
         I moved token verification into reusable authentication middleware
         and separated request validation and normalization from the
@@ -180,7 +169,6 @@
         and environment-specific configuration is managed through
         configurable values.
       </p>
-
       <p>
         In Angular, I introduced a typed Trip interface, authentication
         guards for administrative routes, encoded trip codes in request
@@ -191,7 +179,6 @@
       </p>
 
       <h3>Security Improvements</h3>
-
       <p>
         New passwords use a higher PBKDF2 work factor and constant-time
         comparisons. Compatibility with older user records is retained
@@ -204,7 +191,6 @@
       </p>
 
       <h3>Learning and Challenges</h3>
-
       <p>
         This enhancement reinforced that working functionality also needs
         clear boundaries, predictable failure behavior, and maintainable
@@ -212,18 +198,16 @@
         middleware can establish a consistent boundary between untrusted
         requests and application logic.
       </p>
-
       <p>
         Maintaining compatibility was a significant challenge. The password
         enhancement needed to preserve existing accounts, and price
         normalization needed to accommodate the original string-based
         dataset and numeric values from Angular forms. The login correction
-        also strengthened my understanding of lazy observables and the need
-        to connect asynchronous control flow directly to the operation.
+        also strengthened my understanding of lazy observables and the
+        need to connect asynchronous control flow directly to the operation.
       </p>
 
       <h3>Validation and Course Outcomes</h3>
-
       <p>
         Verification included three passing backend validation tests,
         JavaScript syntax checks, dependency installation, and a successful
@@ -231,7 +215,6 @@
         that the initial bundle was approximately 50 KB above its configured
         budget, identifying a future optimization opportunity.
       </p>
-
       <p>
         This enhancement provides its strongest evidence for Outcome Four
         through software engineering techniques and Outcome Five through
@@ -243,50 +226,63 @@
       </p>
 
       <h3>Artifact Files</h3>
-
       <p>
-        The repository contains the submitted technical archive and Word
-        narrative. The archive provides the original and enhanced project
-        materials for comparison.
+        Download the technical archive to review the original and enhanced
+        project materials. The Word narrative explains the artifact
+        selection, improvements, learning, and course outcome coverage.
       </p>
+
+      <a
+        class="button"
+        href="./CS499%20Milestone%20Two%20-%20TechnicalArtifact%20Cassidy%20Reinitz.zip"
+        download
+      >
+        Download Travlr Technical Artifact (ZIP)
+      </a>
+
+      <a
+        class="button"
+        href="./CS499%20Milestone%20Two%20Enhancement%20Narrative%20Cassidy%20Reinitz.docx"
+        download
+      >
+        Download Enhancement Narrative (Word)
+      </a>
 
       <a
         class="button"
         href="https://github.com/CassidyReinitz/cassidyreinitz.github.io"
       >
-        View artifact files and Word narrative
+        View GitHub Repository
       </a>
     </section>
 
-    <section id="review">
-      <h2>Code Review</h2>
-
+    <section id="review" aria-labelledby="review-title">
+      <h2 id="review-title">Code Review</h2>
       <p>
         The pre-enhancement code review examines existing functionality,
         identifies areas for improvement, and explains the planned
         enhancements across the three portfolio categories.
       </p>
-
       <a class="button" href="https://youtu.be/g_5qPDk9G7w">
-        Watch my code review video
+        Watch My Code Review Video
       </a>
     </section>
 
-    <section id="portfolio-progress">
-      <h2>Portfolio Progress</h2>
-
+    <section id="portfolio-progress" aria-labelledby="progress-title">
+      <h2 id="progress-title">Portfolio Progress</h2>
       <p>
         The software design and engineering enhancement is presented above.
-        The algorithms and data structures enhancement, database enhancement,
-        and professional self-assessment will be integrated as the remaining
-        portfolio pages are published.
+        The algorithms and data structures enhancement, database
+        enhancement, and professional self-assessment will be integrated
+        as the remaining portfolio pages are published.
       </p>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Cassidy Reinitz · CS 499 Computer Science Portfolio</p>
-
+    <p>
+      &copy; 2026 Cassidy Reinitz · CS 499 Computer Science Portfolio
+    </p>
     <p>
       AI assistance disclosure: ChatGPT assisted with preparing the HTML,
       styling, and adapting the existing enhancement narrative for this page.
