@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cassidy Reinitz | Computer Science Portfolio</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      color: #202020;
+      background: #f5f5f3;
+    }
+    header, main, footer {
+      max-width: 960px;
+      margin: auto;
+      padding: 32px 24px;
+    }
+    header { padding-top: 64px; }
+    h1, h2, h3 { color: #111; line-height: 1.25; }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 12px; }
+    .subtitle { color: #555; }
+    nav { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+    a { color: #202020; text-underline-offset: 4px; }
+    a:hover { color: #555; }
+    a:focus-visible { outline: 3px solid #333; outline-offset: 5px; }
+    section {
+      background: white;
+      padding: 32px;
+      margin-bottom: 28px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      scroll-margin-top: 24px;
+    }
+    .label {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #555;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      margin: 6px 8px 6px 0;
+    }
+    footer { color: #555; font-size: .9rem; }
+    @media (max-width: 600px) {
+      section { padding: 22px; }
+      header, main, footer { padding-left: 16px; padding-right: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="label">CS 499 · Computer Science Capstone</p>
+    <h1>Cassidy Reinitz</h1>
+    <p class="subtitle">
+      Software engineering · Full-stack development · Human-computer interaction
+    </p>
+    <p>
+      My portfolio documents the growth of selected coursework through
+      improvements in software design, algorithms, databases, and security.
+    </p>
+    <nav aria-label="Portfolio navigation">
+      <a href="#software">Software Design and Engineering</a>
+      <a href="#review">Code Review</a>
+      <a href="#portfolio-progress">Portfolio Progress</a>
+      <a href="https://github.com/CassidyReinitz/cassidyreinitz.github.io">
+        Repository
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="software">
+      <p class="label">Enhancement One · CS 465</p>
+      <h2>Travlr Getaways</h2>
+      <p>
+        A full-stack travel application originally developed in July and
+        August 2026 and enhanced for CS 499 in September 2026.
+      </p>
+
+      <h3>Artifact and Selection</h3>
+      <p>
+        Travlr Getaways combines a public Express and Handlebars website
+        with an Angular administrative application. A Node.js and Express
+        REST API connects the interface to MongoDB through Mongoose.
+        The application supports trip management and administrative
+        authentication using Passport and JSON Web Tokens.
+      </p>
+      <p>
+        I selected this artifact because it demonstrates my ability to
+        connect presentation, service, controller, model, and database
+        layers. Enhancing the completed CS 465 Module Seven version
+        allowed me to improve design and security across an entire
+        application.
+      </p>
+
+      <h3>Design Improvements</h3>
+      <p>
+        I moved token verification into reusable authentication middleware
+        and separated request validation and normalization from the
+        controllers. Controllers now accept an explicit allowlist of trip
+        fields. Trip codes are normalized consistently, duplicate codes
+        receive a conflict response, and schema constraints reinforce
+        validation. API errors avoid exposing internal exception details,
+        and environment-specific configuration is managed through
+        configurable values.
+      </p>
+      <p>
+        In Angular, I introduced a typed Trip interface, authentication
+        guards for administrative routes, encoded trip codes in request
+        URLs, and stronger form constraints. I also replaced a timer-based
+        login check with a direct subscription to the HTTP observable.
+        Navigation now follows a successful login response, and failures
+        produce a clear error message.
+      </p>
+
+      <h3>Security Improvements</h3>
+      <p>
+        New passwords use a higher PBKDF2 work factor and constant-time
+        comparisons. Compatibility with older user records is retained
+        through a fallback for the original work factor. Tokens have a
+        shorter configurable lifetime and enforce algorithm, issuer, and
+        audience constraints. General login failure messages reduce
+        disclosure of account information. Server-side authentication
+        protects write operations, while client-side guards support the
+        administrative user experience.
+      </p>
+
+      <h3>Learning and Challenges</h3>
+      <p>
+        This enhancement reinforced that working functionality also needs
+        clear boundaries, predictable failure behavior, and maintainable
+        structure. Separating validation and authentication showed me how
+        middleware can establish a consistent boundary between untrusted
+        requests and application logic.
+      </p>
+      <p>
+        Maintaining compatibility was a significant challenge. The password
+        enhancement needed to preserve existing accounts, and price
+        normalization needed to accommodate the original string-based
+        dataset and numeric values from Angular forms. The login correction
+        also strengthened my understanding of lazy observables and the need
+        to connect asynchronous control flow directly to the operation.
+      </p>
+
+      <h3>Validation and Course Outcomes</h3>
+      <p>
+        Verification included three passing backend validation tests,
+        JavaScript syntax checks, dependency installation, and a successful
+        Angular production build. The build reported a non-failing warning
+        that the initial bundle was approximately 50 KB above its configured
+        budget, identifying a future optimization opportunity.
+      </p>
+      <p>
+        This enhancement provides its strongest evidence for Outcome Four
+        through software engineering techniques and Outcome Five through
+        security improvements. The narrative and technical documentation
+        support Outcome Two, while compatibility decisions and validation
+        trade-offs support Outcome Three. Outcome One will be addressed
+        more fully through the professional self-assessment and the
+        portfolio as a whole.
+      </p>
+
+      <h3>Artifact Files</h3>
+      <p>
+        The repository contains the submitted technical archive and Word
+        narrative. The archive provides the original and enhanced project
+        materials for comparison.
+      </p>
+      <a class="button"
+         href="https://github.com/CassidyReinitz/cassidyreinitz.github.io">
+        View artifact files and Word narrative
+      </a>
+    </section>
+
+    <section id="review">
+      <h2>Code Review</h2>
+      <p>
+        The pre-enhancement code review examines existing functionality,
+        identifies areas for improvement, and explains the planned
+        enhancements across the three portfolio categories.
+      </p>
+      <p>The video link will be added after its hosting location is confirmed.</p>
+    </section>
+
+    <section id="portfolio-progress">
+      <h2>Portfolio Progress</h2>
+      <p>
+        The software design and engineering enhancement is presented above.
+        The algorithms and data structures enhancement, database enhancement,
+        and professional self-assessment will be integrated as the remaining
+        portfolio pages are published.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Cassidy Reinitz · CS 499 Computer Science Portfolio</p>
+    <p>
+      AI assistance disclosure: ChatGPT assisted with preparing the HTML,
+      styling, and adapting the existing enhancement narrative for this page.
+    </p>
+  </footer>
+</body>
+</html>
