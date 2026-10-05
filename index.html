@@ -4,9 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cassidy Reinitz | Computer Science Portfolio</title>
+
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,19 +21,55 @@
       color: #202020;
       background: #f5f5f3;
     }
-    header, main, footer {
+
+    header,
+    main,
+    footer {
       max-width: 960px;
       margin: auto;
       padding: 32px 24px;
     }
-    header { padding-top: 64px; }
-    h1, h2, h3 { color: #111; line-height: 1.25; }
-    h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 12px; }
-    .subtitle { color: #555; }
-    nav { display: flex; flex-wrap: wrap; gap: 12px 24px; }
-    a { color: #202020; text-underline-offset: 4px; }
-    a:hover { color: #555; }
-    a:focus-visible { outline: 3px solid #333; outline-offset: 5px; }
+
+    header {
+      padding-top: 64px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #111;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #555;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+    }
+
+    a {
+      color: #202020;
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: #555;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #333;
+      outline-offset: 5px;
+    }
+
     section {
       background: white;
       padding: 32px;
@@ -35,12 +78,14 @@
       border-radius: 12px;
       scroll-margin-top: 24px;
     }
+
     .label {
-      font-size: .85rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: 0.08em;
       color: #555;
     }
+
     .button {
       display: inline-block;
       padding: 10px 16px;
@@ -48,24 +93,42 @@
       border-radius: 6px;
       margin: 6px 8px 6px 0;
     }
-    footer { color: #555; font-size: .9rem; }
+
+    footer {
+      color: #555;
+      font-size: 0.9rem;
+    }
+
     @media (max-width: 600px) {
-      section { padding: 22px; }
-      header, main, footer { padding-left: 16px; padding-right: 16px; }
+      section {
+        padding: 22px;
+      }
+
+      header,
+      main,
+      footer {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <p class="label">CS 499 · Computer Science Capstone</p>
+
     <h1>Cassidy Reinitz</h1>
+
     <p class="subtitle">
       Software engineering · Full-stack development · Human-computer interaction
     </p>
+
     <p>
       My portfolio documents the growth of selected coursework through
       improvements in software design, algorithms, databases, and security.
     </p>
+
     <nav aria-label="Portfolio navigation">
       <a href="#software">Software Design and Engineering</a>
       <a href="#review">Code Review</a>
@@ -79,13 +142,16 @@
   <main>
     <section id="software">
       <p class="label">Enhancement One · CS 465</p>
+
       <h2>Travlr Getaways</h2>
+
       <p>
         A full-stack travel application originally developed in July and
         August 2026 and enhanced for CS 499 in September 2026.
       </p>
 
       <h3>Artifact and Selection</h3>
+
       <p>
         Travlr Getaways combines a public Express and Handlebars website
         with an Angular administrative application. A Node.js and Express
@@ -93,6 +159,7 @@
         The application supports trip management and administrative
         authentication using Passport and JSON Web Tokens.
       </p>
+
       <p>
         I selected this artifact because it demonstrates my ability to
         connect presentation, service, controller, model, and database
@@ -102,6 +169,7 @@
       </p>
 
       <h3>Design Improvements</h3>
+
       <p>
         I moved token verification into reusable authentication middleware
         and separated request validation and normalization from the
@@ -112,6 +180,7 @@
         and environment-specific configuration is managed through
         configurable values.
       </p>
+
       <p>
         In Angular, I introduced a typed Trip interface, authentication
         guards for administrative routes, encoded trip codes in request
@@ -122,6 +191,7 @@
       </p>
 
       <h3>Security Improvements</h3>
+
       <p>
         New passwords use a higher PBKDF2 work factor and constant-time
         comparisons. Compatibility with older user records is retained
@@ -134,6 +204,7 @@
       </p>
 
       <h3>Learning and Challenges</h3>
+
       <p>
         This enhancement reinforced that working functionality also needs
         clear boundaries, predictable failure behavior, and maintainable
@@ -141,6 +212,7 @@
         middleware can establish a consistent boundary between untrusted
         requests and application logic.
       </p>
+
       <p>
         Maintaining compatibility was a significant challenge. The password
         enhancement needed to preserve existing accounts, and price
@@ -151,6 +223,7 @@
       </p>
 
       <h3>Validation and Course Outcomes</h3>
+
       <p>
         Verification included three passing backend validation tests,
         JavaScript syntax checks, dependency installation, and a successful
@@ -158,6 +231,7 @@
         that the initial bundle was approximately 50 KB above its configured
         budget, identifying a future optimization opportunity.
       </p>
+
       <p>
         This enhancement provides its strongest evidence for Outcome Four
         through software engineering techniques and Outcome Five through
@@ -169,29 +243,38 @@
       </p>
 
       <h3>Artifact Files</h3>
+
       <p>
         The repository contains the submitted technical archive and Word
         narrative. The archive provides the original and enhanced project
         materials for comparison.
       </p>
-      <a class="button"
-         href="https://github.com/CassidyReinitz/cassidyreinitz.github.io">
+
+      <a
+        class="button"
+        href="https://github.com/CassidyReinitz/cassidyreinitz.github.io"
+      >
         View artifact files and Word narrative
       </a>
     </section>
 
     <section id="review">
       <h2>Code Review</h2>
+
       <p>
         The pre-enhancement code review examines existing functionality,
         identifies areas for improvement, and explains the planned
         enhancements across the three portfolio categories.
       </p>
-      <p>The video link will be added after its hosting location is confirmed.</p>
+
+      <a class="button" href="https://youtu.be/g_5qPDk9G7w">
+        Watch my code review video
+      </a>
     </section>
 
     <section id="portfolio-progress">
       <h2>Portfolio Progress</h2>
+
       <p>
         The software design and engineering enhancement is presented above.
         The algorithms and data structures enhancement, database enhancement,
@@ -203,6 +286,7 @@
 
   <footer>
     <p>© 2026 Cassidy Reinitz · CS 499 Computer Science Portfolio</p>
+
     <p>
       AI assistance disclosure: ChatGPT assisted with preparing the HTML,
       styling, and adapting the existing enhancement narrative for this page.
