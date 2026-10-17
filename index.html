@@ -102,7 +102,7 @@
 <p>My security mindset also developed through CS 410. Analyzing C++ vulnerabilities required me to consider unchecked input, hardcoded credentials, incomplete authentication, and missing validation. The capstone extends that thinking into multiple application boundaries. Travlr uses stronger password processing, constrained token verification, allowlisted inputs, and safer error responses. Grazioso Salvare relies on database privileges to enforce reader restrictions even when application checks are bypassed. I now approach security by asking what an untrusted caller could supply, what authority an operation requires, and which layer must enforce the rule.</p>
 <h3>Professional Growth and Continued Development</h3>
 <p>Preparing the ePortfolio strengthened my ability to distinguish a completed implementation from a proposed improvement. My initial Travlr plan included separate administrator and editor roles and audit records. The completed enhancement instead concentrated on authentication, validation, credential protection, client behavior, and maintainability. My final presentation must reflect that implemented scope. Accurate reporting is especially important when an employer or reviewer uses the portfolio to judge what I can demonstrate.</p>
-<p>I used Professor Sanford&#x27;s feedback to expand verification beyond the original milestone scope. Travlr now passes 38 tests, including HTTP authentication, rejected writes, login failures, and sanitized error responses. Persistence is stubbed, so these tests do not establish live MongoDB or browser behavior. Advising Assistance now includes 12 graph benchmark configurations, with up to 4,000 courses and 499,500 edges, independent validation of every prerequisite, and a separate large-cycle rejection check. Reviewing those measurements also led me to correct complexity explanations that had omitted sorting costs. The code-review expansion script adds deeper source analysis; recording and publishing that supplement remain final presentation tasks.</p>
+<p>I used Professor Sanford&#x27;s feedback to expand verification beyond the original milestone scope. Travlr now passes 38 tests, including HTTP authentication, rejected writes, login failures, and sanitized error responses. Persistence is stubbed, so these tests do not establish live MongoDB or browser behavior. Advising Assistance now includes 12 graph benchmark configurations, with up to 4,000 courses and 499,500 edges, independent validation of every prerequisite, and a separate large-cycle rejection check. Reviewing those measurements also led me to correct complexity explanations that had omitted sorting costs. I expanded the code review to approximately 30 minutes and 54 seconds with deeper source analysis, a worked prerequisite-cycle example, and an explanation of expected and observed test results.</p>
 <p>My use of generative AI has also made critical review more important. Assistance can support implementation and writing, but polished output does not establish that code is correct or that a claim is supported. I need to examine results, understand the relevant trade-offs, and acknowledge assistance. This responsibility aligns with my broader goal of developing software whose behavior and limitations I can explain.</p>
 <h3>Introduction to the Portfolio Artifacts</h3>
 <p>The artifacts that follow illustrate complementary parts of my development. Travlr Getaways, originally developed in CS 465, demonstrates full-stack software design through improvements to application boundaries, authentication, validation, and asynchronous interface behavior. The CS 300 Advising Assistance Program demonstrates algorithmic reasoning through dependency modeling, validation, cycle detection, and reproducible ordering. The CS 340 Grazioso Salvare dashboard demonstrates database engineering through controlled data access, schema enforcement, query analysis, and meaningful summaries.</p>
@@ -427,10 +427,15 @@
         identifies areas for improvement, and explains the planned
         enhancements across the three portfolio categories.
       </p>
-      <a class="button" href="https://youtu.be/g_5qPDk9G7w">
-        Watch My Original Code Review Video (20:08)
-      </a>
-      <p>The original pre-enhancement review remains available. A substantive expansion script adds deeper source analysis and a clearly separated final verification update. The expanded recording has not yet been published.</p>
+      <h3>Final Expanded Code Review — 30:54</h3>
+      <video controls preload="metadata" style="width:100%;height:auto;border-radius:8px" aria-label="Final expanded CS 499 code review">
+        <source src="./review/CS499_Code_Review_Final.mp4" type="video/mp4">
+        Your browser does not support embedded video. Use the download link below.
+      </video>
+      <p><a class="button" href="./review/CS499_Code_Review_Final.mp4">Watch or Download Final Code Review (30:54)</a></p>
+      <p>The completed review retains the original pre-enhancement walkthrough and adds deeper source analysis, a clearly separated final verification update, and worked examples explaining prerequisite cycles and test results. Supplemental visuals use prepared source excerpts, diagrams, and retained test evidence.</p>
+      <p>AI acknowledgment: ChatGPT assisted with supplemental scripting, visuals, and video assembly. VoiceLabs synthesized the supplemental narration using my Cassidy Reinitz voice profile.</p>
+      <p><a href="https://youtu.be/g_5qPDk9G7w">Original pre-enhancement review (20:08)</a></p>
       <a class="button" href="./review/Code_Review_Expansion_Recording_Script.docx" download>Download Code Review Expansion Script (Word)</a>
       <a href="./review/Code_Review_Expansion.md">Read recording instructions and script</a>
     </section>
@@ -439,7 +444,7 @@
       <h2 id="progress-title">Portfolio Progress</h2>
       <p>
         All three enhancement categories are presented above with technical
-        archives and accompanying narratives. The professional self-assessment now appears first. Authentication and failure tests and graph benchmarks address instructor recommendations. The existing code review remains 20:08; an expanded recording script is ready, and the supplement still needs to be recorded and uploaded.
+        archives and accompanying narratives. The professional self-assessment now appears first. Authentication and failure tests and graph benchmarks address instructor recommendations. The final expanded code review is complete at 30:54 and is available above. It includes the preserved original review, deeper source analysis, final verification evidence, and worked examples.
       </p>
       <a class="button"
          href="https://github.com/CassidyReinitz/cassidyreinitz.github.io">
