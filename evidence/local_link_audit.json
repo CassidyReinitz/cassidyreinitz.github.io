@@ -1,0 +1,81 @@
+{
+  "first_section": "self-assessment",
+  "checks": [
+    {
+      "href": "#self-assessment",
+      "exists": true
+    },
+    {
+      "href": "#software",
+      "exists": true
+    },
+    {
+      "href": "#algorithms",
+      "exists": true
+    },
+    {
+      "href": "#databases",
+      "exists": true
+    },
+    {
+      "href": "#review",
+      "exists": true
+    },
+    {
+      "href": "#portfolio-progress",
+      "exists": true
+    },
+    {
+      "href": "./CS499_Professional_Self_Assessment_Cassidy_Reinitz.docx",
+      "exists": true
+    },
+    {
+      "href": "./evidence/travlr_security_tests.txt",
+      "exists": true
+    },
+    {
+      "href": "./evidence/TEST_SCOPE.md",
+      "exists": true
+    },
+    {
+      "href": "./CS499%20Milestone%20Two%20-%20TechnicalArtifact%20Cassidy%20Reinitz.zip",
+      "exists": true
+    },
+    {
+      "href": "./CS499%20Milestone%20Two%20Enhancement%20Narrative%20Cassidy%20Reinitz.docx",
+      "exists": true
+    },
+    {
+      "href": "./evidence/graph_benchmark.csv",
+      "exists": true
+    },
+    {
+      "href": "./evidence/BENCHMARK_METHOD.md",
+      "exists": true
+    },
+    {
+      "href": "./4-2%20Milestone%203%20Technical%20Artifacts.zip",
+      "exists": true
+    },
+    {
+      "href": "./4-2%20Milestone%20Enhancements.docx",
+      "exists": true
+    },
+    {
+      "href": "./5-2%20Milestone%20Four-Technical%20Artifact%20Cassidy_Reinitz.zip",
+      "exists": true
+    },
+    {
+      "href": "./5-2%20Milestone%20Four%20-%20Enhancement%20Three%20-%20Database.docx",
+      "exists": true
+    },
+    {
+      "href": "./review/Code_Review_Expansion_Recording_Script.docx",
+      "exists": true
+    },
+    {
+      "href": "./review/Code_Review_Expansion.md",
+      "exists": true
+    }
+  ]
+}

@@ -70,6 +70,7 @@
       improvements in software design, algorithms, databases, and security.
     </p>
     <nav aria-label="Portfolio navigation">
+      <a href="#self-assessment">Professional Self Assessment</a>
       <a href="#software">Software Design and Engineering</a>
       <a href="#algorithms">Algorithms and Data Structures</a>
       <a href="#databases">Databases</a>
@@ -82,6 +83,33 @@
   </header>
 
   <main>
+<section id="self-assessment" aria-labelledby="self-assessment-title">
+<p class="label">Professional introduction</p>
+<h2 id="self-assessment-title">Professional Self Assessment</h2>
+<p>My Computer Science coursework and capstone have prepared me to pursue software engineering with an emphasis on full-stack development and human-computer interaction. Earlier in the program, I concentrated on making a program produce the required output. Developing this ePortfolio expanded my definition of successful software to include secure data handling, understandable interfaces, maintainable architecture, and evidence that a solution behaves as intended. My work demonstrates growth in evaluating existing systems, selecting improvements that serve a practical purpose, and explaining both the results and their limitations.</p>
+<p>My professional goal is to build applications that people can trust and use confidently. I value clear communication, accessibility, and decisions supported by testing. The three enhancements in this portfolio connect those values to application architecture, prerequisite planning, and rescue-animal data access. They also show how I approach unfamiliar problems: examine the existing behavior, identify risks, choose an appropriate technique, and evaluate the result before making a claim about its value.</p>
+<h3>Collaboration and Stakeholder Communication</h3>
+<p>CS 250 Software Development Lifecycle introduced me to the responsibilities of Scrum Masters, Product Owners, developers, and testers through the SNHU Travel scenario. The role exercises were simulations completed as coursework. They helped me examine how user stories, acceptance criteria, test cases, and Scrum events create shared expectations across different responsibilities. A developer needs enough detail to implement a requirement, while a Product Owner needs to understand how a technical decision affects user priorities. Studying those perspectives taught me to make assumptions visible and seek clarification before uncertainty becomes rework.</p>
+<p>I also participated in peer discussion about Scrum Master responsibilities. In a response to Sebastian Sullivan, I engaged with the importance of mentorship, leadership, mediation, and remaining willing to learn from others. That exchange gave me practice responding respectfully to another person&#x27;s perspective. Together, the discussion and role exercises helped me understand collaboration as a process of listening, making decisions understandable, and keeping work connected to shared goals. In a development team, I would support that process through clear acceptance criteria, focused review comments, and documentation that explains the reason for a change.</p>
+<p>CS 255 provided another perspective through the DriverPass system-design project. Preparing UML diagrams, a system-design document, and a presentation with speaker notes required me to represent a client&#x27;s needs in different forms. The simulated client context taught me that technical completeness and audience understanding must be considered together. Developers need precise relationships and behavior, while a nontechnical audience needs an explanation of what a proposed system enables. This experience strengthened my ability to communicate the same solution at an appropriate level of detail.</p>
+<h3>Engineering Solutions and Evaluating Trade Offs</h3>
+<p>My coursework developed my ability to connect a problem&#x27;s requirements to its data structures and architecture. In the CS 300 Advising Assistance enhancement, course prerequisites became a directed graph rather than text attached to individual records. Hash-based lookup, an adjacency list, depth-first cycle detection, and topological sorting address different parts of the advising problem. I learned to explain why the relationships are represented in a particular direction and why a valid course sequence should be produced only after the catalog passes validation.</p>
+<p>The enhanced catalog uses average O(1) hash lookup and performs alphabetical sorting when displaying the catalog. The DFS traversal takes O(V + E), where V represents courses and E represents prerequisite relationships; the full method also sorts vertices, making its expected bound O(V log V + E). The topological ordering uses a min-priority queue to make the result deterministic. That choice introduces a logarithmic heap cost compared with a standard queue, but makes output more reproducible for users and tests. Evaluating that trade-off strengthened my ability to consider usability and testability alongside asymptotic performance.</p>
+<p>Software engineering coursework also showed me how responsibilities interact across an application. In Travlr Getaways, the interface, API, authentication logic, and database must agree on valid data and expected behavior. Centralizing validation and authentication middleware made those boundaries clearer. Correcting the Angular login flow reinforced the importance of connecting navigation to the actual asynchronous response. These experiences prepared me to investigate failures across layers instead of treating each component as an isolated program.</p>
+<h3>Database Engineering and a Security Mindset</h3>
+<p>Database work taught me to evaluate the amount of data retrieved, the integrity of stored records, and the permissions of the account performing an operation. The Grazioso Salvare enhancement combines Python validation with MongoDB schema enforcement, bounded pagination, aggregation, and collection-scoped permissions. The interface retrieves a limited page of records while the breed summary describes the full matching result set. This distinction matters because a chart based only on the displayed page could mislead rescue-planning decisions.</p>
+<p>The database evidence reports 22 passing integration tests against an authenticated MongoDB instance. On 30,000 synthetic AAC-like records, indexing reduced documents examined from 30,000 to 300 for the measured water-rescue query, a 99 percent reduction. These results demonstrate the tested workload rather than production performance on the original shelter dataset. A sorting stage remained, and indexes introduce storage and write costs. Recognizing those limits is part of presenting a defensible engineering conclusion.</p>
+<p>My security mindset also developed through CS 410. Analyzing C++ vulnerabilities required me to consider unchecked input, hardcoded credentials, incomplete authentication, and missing validation. The capstone extends that thinking into multiple application boundaries. Travlr uses stronger password processing, constrained token verification, allowlisted inputs, and safer error responses. Grazioso Salvare relies on database privileges to enforce reader restrictions even when application checks are bypassed. I now approach security by asking what an untrusted caller could supply, what authority an operation requires, and which layer must enforce the rule.</p>
+<h3>Professional Growth and Continued Development</h3>
+<p>Preparing the ePortfolio strengthened my ability to distinguish a completed implementation from a proposed improvement. My initial Travlr plan included separate administrator and editor roles and audit records. The completed enhancement instead concentrated on authentication, validation, credential protection, client behavior, and maintainability. My final presentation must reflect that implemented scope. Accurate reporting is especially important when an employer or reviewer uses the portfolio to judge what I can demonstrate.</p>
+<p>I used Professor Sanford&#x27;s feedback to expand verification beyond the original milestone scope. Travlr now passes 38 tests, including HTTP authentication, rejected writes, login failures, and sanitized error responses. Persistence is stubbed, so these tests do not establish live MongoDB or browser behavior. Advising Assistance now includes 12 graph benchmark configurations, with up to 4,000 courses and 499,500 edges, independent validation of every prerequisite, and a separate large-cycle rejection check. Reviewing those measurements also led me to correct complexity explanations that had omitted sorting costs. The code-review expansion script adds deeper source analysis; recording and publishing that supplement remain final presentation tasks.</p>
+<p>My use of generative AI has also made critical review more important. Assistance can support implementation and writing, but polished output does not establish that code is correct or that a claim is supported. I need to examine results, understand the relevant trade-offs, and acknowledge assistance. This responsibility aligns with my broader goal of developing software whose behavior and limitations I can explain.</p>
+<h3>Introduction to the Portfolio Artifacts</h3>
+<p>The artifacts that follow illustrate complementary parts of my development. Travlr Getaways, originally developed in CS 465, demonstrates full-stack software design through improvements to application boundaries, authentication, validation, and asynchronous interface behavior. The CS 300 Advising Assistance Program demonstrates algorithmic reasoning through dependency modeling, validation, cycle detection, and reproducible ordering. The CS 340 Grazioso Salvare dashboard demonstrates database engineering through controlled data access, schema enforcement, query analysis, and meaningful summaries.</p>
+<p>Together with the code review and enhancement narratives, these projects show how I analyze a system, communicate a plan, implement appropriate techniques, and evaluate the result. The original and enhanced versions allow a reviewer to examine that growth directly. My broader coursework contributes the collaboration strategies, stakeholder communication, and security analysis that inform these technical decisions. This portfolio represents my preparation to contribute as a software engineer while continuing to develop stronger testing practices and a deeper understanding of the people who use the systems I build.</p>
+<h3>AI Use Acknowledgment</h3>
+<p>I used OpenAI ChatGPT to assist with organizing and drafting this self-assessment and to support code, testing, and documentation work described in the enhancement narratives. AI assistance is acknowledged here and in the accompanying project materials; technical claims should be read alongside the retained implementation and verification evidence.</p>
+<a class="button" href="./CS499_Professional_Self_Assessment_Cassidy_Reinitz.docx" download>Download Professional Self Assessment (Word)</a></section>
     <section id="software" aria-labelledby="software-title">
       <p class="label">Enhancement One · CS 465</p>
       <h2 id="software-title">Travlr Getaways</h2>
@@ -136,6 +164,7 @@
         protects write operations, while client-side guards support the
         administrative user experience.
       </p>
+      <p>The completed application uses authentication-based write protection. Separate administrator/editor roles and audit records from the original plan were not implemented. Registration remains public, and registered users can obtain write-capable tokens. Trusted enrollment and role permissions remain future security work.</p><p><a href="./evidence/travlr_security_tests.txt">View the 38-test run</a> · <a href="./evidence/TEST_SCOPE.md">Read the test scope and limitations</a></p>
 
       <h3>Learning and Challenges</h3>
       <p>
@@ -156,7 +185,7 @@
 
       <h3>Validation and Course Outcomes</h3>
       <p>
-        Verification included three passing backend validation tests,
+        The final backend run passes 38 tests, including HTTP authentication, protected writes, login behavior, password compatibility, and sanitized failures. Real Express routes, Passport, JWT, and password logic are exercised with Mongoose persistence stubbed. This is not live-database or browser end-to-end verification. Earlier milestone verification included
         JavaScript syntax checks, dependency installation, and a successful
         Angular production build. The build reported a non-failing warning
         that the initial bundle was approximately 50 KB above its configured
@@ -167,9 +196,7 @@
         through software engineering techniques and Outcome Five through
         security improvements. The narrative and technical documentation
         support Outcome Two, while compatibility decisions and validation
-        trade-offs support Outcome Three. Outcome One will be addressed
-        more fully through the professional self-assessment and the
-        portfolio as a whole.
+        trade-offs support Outcome Three. The professional self-assessment connects Outcome One to peer discussion, simulated Scrum roles, and stakeholder communication.
       </p>
 
       <h3>Artifact Files</h3>
@@ -212,16 +239,13 @@
         with an unordered_map keyed by normalized course number, providing
         average O(1) insertion and lookup. An adjacency list stores edges
         from prerequisites to dependent courses, and an in-degree map tracks
-        each course's prerequisite count. Alphabetical sorting occurs only
-        for display, at O(V log V), separating operational lookup from
-        presentation order.
+        each course's prerequisite count. Alphabetical display copies courses and their prerequisites before sorting, with O(V + E) copying and O(V log V) comparisons. Graph construction also sorts dependent lists. These costs make the implementation trade-offs explicit.
       </p>
       <p>
-        Depth-first search detects cycles in O(V + E) time and reports the
-        actual circular chain. Kahn's topological-sort algorithm generates
+        DFS traversal detects cycles in O(V + E), but this implementation sorts vertices first, so the complete method is expected O(V log V + E). It reports the actual circular chain. Kahn's topological-sort algorithm generates
         a valid completion sequence. A min-priority queue provides
         deterministic selection when multiple courses are available, with
-        a documented upper bound of O((V + E) log V). I accepted the heap
+        an expected bound of O(E + V log V). I accepted the heap
         cost because consistent results improve usability and testability.
       </p>
       <p>
@@ -253,8 +277,7 @@
 
       <h3>Validation and Course Outcomes</h3>
       <p>
-        All ten automated tests passed under both the normal warning-enabled
-        build and AddressSanitizer and UndefinedBehaviorSanitizer. Coverage
+        All ten regression tests passed under the warning-enabled build and with AddressSanitizer and UndefinedBehaviorSanitizer; leak detection was disabled because of the execution environment. Leak checking was not completed. Coverage
         includes loading, normalized lookup, alphabetical display,
         topological ordering, quoted titles, duplicates, missing
         prerequisites, cycles, malformed or empty data, and invalid menus.
@@ -265,10 +288,10 @@
         The working application supports Outcome Four; documentation and
         clear feedback support Outcome Two; defensive parsing and rejection
         of inconsistent input support Outcome Five. Documentation provides
-        limited support for Outcome One, which remains a focus of the
-        final professional self-assessment.
+        limited support for Outcome One, which is discussed through coursework examples in the professional self-assessment.
       </p>
 
+      <h3>Instructor Feedback Follow Up</h3><p>Twelve generated graph configurations passed, including sparse, chain, and wide cases up to 4,000 courses and dense cases up to 499,500 edges. Each configuration ran three times. Every prerequisite was checked against the output order, repeated schedules had to match, and a separate 4,000-course cycle was rejected. These local timings describe synthetic inputs, not production guarantees.</p><p><a href="./evidence/graph_benchmark.csv">View benchmark measurements (CSV)</a> · <a href="./evidence/BENCHMARK_METHOD.md">Read benchmark method and limits</a></p>
       <h3>Artifact Files</h3>
       <a class="button"
          href="./4-2%20Milestone%203%20Technical%20Artifacts.zip"
@@ -405,18 +428,18 @@
         enhancements across the three portfolio categories.
       </p>
       <a class="button" href="https://youtu.be/g_5qPDk9G7w">
-        Watch My Code Review Video
+        Watch My Original Code Review Video (20:08)
       </a>
+      <p>The original pre-enhancement review remains available. A substantive expansion script adds deeper source analysis and a clearly separated final verification update. The expanded recording has not yet been published.</p>
+      <a class="button" href="./review/Code_Review_Expansion_Recording_Script.docx" download>Download Code Review Expansion Script (Word)</a>
+      <a href="./review/Code_Review_Expansion.md">Read recording instructions and script</a>
     </section>
 
     <section id="portfolio-progress" aria-labelledby="progress-title">
       <h2 id="progress-title">Portfolio Progress</h2>
       <p>
         All three enhancement categories are presented above with technical
-        archives and accompanying narratives. The professional
-        self-assessment will be added during final portfolio preparation.
-        Applicable instructor feedback will be incorporated as part of
-        final polishing.
+        archives and accompanying narratives. The professional self-assessment now appears first. Authentication and failure tests and graph benchmarks address instructor recommendations. The existing code review remains 20:08; an expanded recording script is ready, and the supplement still needs to be recorded and uploaded.
       </p>
       <a class="button"
          href="https://github.com/CassidyReinitz/cassidyreinitz.github.io">
@@ -429,7 +452,7 @@
     <p>&copy; 2026 Cassidy Reinitz · CS 499 Computer Science Portfolio</p>
     <p>
       AI assistance disclosure: ChatGPT assisted with preparing the HTML,
-      styling, and adapting the existing enhancement narratives for this page.
+      styling, self-assessment drafting, adapting enhancement narratives, and preparing the follow-up tests, benchmarks, and recording script. Detailed scope notes accompany the artifacts.
     </p>
   </footer>
 </body>

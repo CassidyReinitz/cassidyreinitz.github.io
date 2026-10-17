@@ -1,0 +1,51 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> cs-465-full-stack-development@0.0.0 test
+> node --test test/*.test.js
+
+✔ POST denies missing token before persistence (45.16774ms)
+✔ POST denies wrong scheme token before persistence (5.646936ms)
+✔ POST denies malformed token before persistence (4.54518ms)
+✔ POST denies expired token before persistence (8.895508ms)
+✔ POST denies wrong signature token before persistence (5.621676ms)
+✔ POST denies wrong issuer token before persistence (3.902978ms)
+✔ POST denies wrong audience token before persistence (2.957482ms)
+✔ POST denies wrong algorithm token before persistence (3.779977ms)
+✔ POST denies future not-before token before persistence (4.102048ms)
+✔ PUT denies unauthenticated writes before persistence (3.625582ms)
+✔ DELETE denies unauthenticated writes before persistence (4.334806ms)
+✔ authenticated POST normalizes input and discards privilege and operator fields (4.076062ms)
+✔ invalid authenticated POST is rejected before persistence (3.27115ms)
+✔ authenticated PUT updates one normalized trip (4.696868ms)
+✔ authenticated DELETE targets the requested normalized code (4.525875ms)
+✔ public trip reads remain available without a token (2.90857ms)
+✔ GET /api/trips sanitizes database failure (3.625272ms)
+✔ GET /api/trips/BEACH-01 sanitizes database failure (1.983129ms)
+✔ POST /api/trips sanitizes database failure (3.438212ms)
+✔ PUT /api/trips/BEACH-01 sanitizes database failure (2.901801ms)
+✔ DELETE /api/trips/BEACH-01 sanitizes database failure (3.34064ms)
+✔ POST reports duplicate trip as conflict (3.325955ms)
+✔ PUT reports duplicate trip as conflict (3.588301ms)
+✔ GET reports missing trip (3.07726ms)
+✔ PUT reports missing trip (2.016588ms)
+✔ DELETE reports missing trip (1.898703ms)
+✔ login authenticates through real Passport and returns a constrained JWT (77.034884ms)
+✔ wrong password and unknown account return the same generic response (78.484574ms)
+✔ login database failure returns sanitized 500 (3.726238ms)
+✔ malformed login is rejected before account lookup (3.028844ms)
+✔ registration rejects weak credentials before persistence (3.570937ms)
+✔ registration duplicate and persistence failures are sanitized (166.127623ms)
+✔ password hashing creates distinct salts and accepts only correct passwords (211.884147ms)
+✔ legacy password records remain verifiable (2.109732ms)
+✔ malformed stored hash is rejected without a length exception (1.077668ms)
+✔ normalizes trusted trip fields without accepting arbitrary properties (0.860706ms)
+✔ accepts a complete and valid trip (1.138849ms)
+✔ rejects unsafe codes, prices, images, and missing descriptions (0.234574ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1152.615053

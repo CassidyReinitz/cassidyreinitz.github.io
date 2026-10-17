@@ -1,0 +1,68 @@
+{
+  "checked_at_utc": "2026-10-17T22:11:05.553390+00:00",
+  "base_url": "https://cassidyreinitz.github.io/",
+  "links": [
+    {
+      "href": "#software",
+      "status": "PASS"
+    },
+    {
+      "href": "#algorithms",
+      "status": "PASS"
+    },
+    {
+      "href": "#databases",
+      "status": "PASS"
+    },
+    {
+      "href": "#review",
+      "status": "PASS"
+    },
+    {
+      "href": "#portfolio-progress",
+      "status": "PASS"
+    },
+    {
+      "href": "https://github.com/CassidyReinitz/cassidyreinitz.github.io",
+      "status": 200,
+      "final_url": "https://github.com/CassidyReinitz/cassidyreinitz.github.io"
+    },
+    {
+      "href": "./CS499%20Milestone%20Two%20-%20TechnicalArtifact%20Cassidy%20Reinitz.zip",
+      "status": 200,
+      "final_url": "https://cassidyreinitz.github.io/CS499%20Milestone%20Two%20-%20TechnicalArtifact%20Cassidy%20Reinitz.zip"
+    },
+    {
+      "href": "./CS499%20Milestone%20Two%20Enhancement%20Narrative%20Cassidy%20Reinitz.docx",
+      "status": 200,
+      "final_url": "https://cassidyreinitz.github.io/CS499%20Milestone%20Two%20Enhancement%20Narrative%20Cassidy%20Reinitz.docx"
+    },
+    {
+      "href": "./4-2%20Milestone%203%20Technical%20Artifacts.zip",
+      "status": 200,
+      "final_url": "https://cassidyreinitz.github.io/4-2%20Milestone%203%20Technical%20Artifacts.zip"
+    },
+    {
+      "href": "./4-2%20Milestone%20Enhancements.docx",
+      "status": 200,
+      "final_url": "https://cassidyreinitz.github.io/4-2%20Milestone%20Enhancements.docx"
+    },
+    {
+      "href": "./5-2%20Milestone%20Four-Technical%20Artifact%20Cassidy_Reinitz.zip",
+      "status": 200,
+      "final_url": "https://cassidyreinitz.github.io/5-2%20Milestone%20Four-Technical%20Artifact%20Cassidy_Reinitz.zip"
+    },
+    {
+      "href": "./5-2%20Milestone%20Four%20-%20Enhancement%20Three%20-%20Database.docx",
+      "status": 200,
+      "final_url": "https://cassidyreinitz.github.io/5-2%20Milestone%20Four%20-%20Enhancement%20Three%20-%20Database.docx"
+    },
+    {
+      "href": "https://youtu.be/g_5qPDk9G7w",
+      "status": 200,
+      "final_url": "https://www.youtube.com/watch?v=g_5qPDk9G7w&feature=youtu.be"
+    }
+  ],
+  "self_assessment_present": false,
+  "source_commit": "bd821b150cbcbb238b360b7675c938955ca12144"
+}
