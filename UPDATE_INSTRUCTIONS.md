@@ -16,12 +16,10 @@ Prepared October 17, 2026 from repository commit bd821b150cbcbb238b360b7675c9389
 
 ## Publish the prepared website
 
-These changes have NOT been pushed to GitHub. The current environment has no authenticated
-GitHub write access. Install/connect GitHub in ChatGPT to continue publication, or upload
-the contents of this folder to the root of CassidyReinitz/cassidyreinitz.github.io.
-Do not upload the enclosing ZIP as the website. Replace same-named files with these versions.
-Keep the existing database archive and narrative. Commit changes and allow GitHub Pages to deploy.
-Then check the public URL and all new self-assessment and evidence links.
+The prepared changes were published to the repository main branch on October 17, 2026.
+GitHub Pages builds and deploys that branch. Check the public site for the self-assessment
+section, the revised narratives, updated archives, and new evidence links.
+The database archive and narrative were preserved. The recording task below remains open.
 
 ## Finish the video
 
